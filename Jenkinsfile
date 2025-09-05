@@ -1,12 +1,13 @@
 pipeline {
     agent any
 
-    environment {
-        IMAGE_NAME = "moviesweb"
-        DOCKERHUB_CREDENTIALS = "dockerhub-creds" // Jenkins stored credentials ID
-        DOCKERHUB_REPO = "yourdockerhubusername/moviesweb" 
-        SWARM_SERVICE = "moviesweb_service"
-    }
+environment {
+    IMAGE_NAME = "moviesweb"
+    DOCKERHUB_CREDENTIALS = "dockerhub-creds"
+    DOCKERHUB_REPO = "lavetivenkatesh/moviesweb"  // <-- me actual Docker Hub username
+    SWARM_SERVICE = "moviesweb_service"
+}
+
 
     stages {
         stage('Checkout') {
