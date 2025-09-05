@@ -10,10 +10,13 @@ pipeline {
 
     stages {
         stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/yourusername/your-repo.git'
-            }
-        }
+    steps {
+        git branch: 'main', 
+            url: 'https://github.com/venky-2-003/MOVIESWEB.git', 
+            credentialsId: 'github-token'
+    }
+}
+
 
         stage('Build Docker Image') {
             steps {
